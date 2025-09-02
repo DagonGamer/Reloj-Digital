@@ -63,7 +63,6 @@
                 scope: SCOPES,
                 callback: '', // defined later
             });
-            tokenClient.requestAccessToken({prompt: 'consent'});
         }
 
     </script>
@@ -74,11 +73,7 @@
 </head>
 
 <body>
-    <!-- g_id_onload contains Google Identity Services settings -->
-    <div id="g_id_onload" data-auto_prompt="true" data-callback="handleCredentialResponse"
-        data-client_id="808752279453-v65b4epu2pjqj8ee5qnj2fe9l7odgqpg.apps.googleusercontent.com"></div>
-    <!-- g_id_signin places the button on a page and supports customization -->
-    <div class="g_id_signin"></div>
+    <button onclick="tokenClient.requestAccessToken({prompt: 'consent'});">Iniciar sesión</button>
 </body>
 
 </html>
