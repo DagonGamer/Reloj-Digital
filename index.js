@@ -1,5 +1,4 @@
-var Cargar = async () => {
-    await tokenClient.requestAccessToken();
+tokenClient.callback = async () => {
 
     // Busca la configuración en el drive
     let ArchivosDataFolder;
