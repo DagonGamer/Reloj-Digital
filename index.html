@@ -11,11 +11,11 @@
 
         const CLIENT_ID = '808752279453-v65b4epu2pjqj8ee5qnj2fe9l7odgqpg.apps.googleusercontent.com';
         const API_KEY = 'AIzaSyCO7_To8On1vcHoEcjWbMDnOlFPkj-KRbo';
-        const SCOPES = "email profile https://www.googleapis.com/auth/userinfo.email openid https://www.googleapis.com/auth/drive.metadata.readonly https://www.googleapis.com/auth/userinfo.profile";
+        const SCOPES = "https://www.googleapis.com/auth/drive.metadata.readonly";
         const DISCOVERY_DOC = 'https://www.googleapis.com/discovery/v1/apis/drive/v3/rest';
 
         gapiLoaded = () => {
-            gapi.load("client");
+            gapi.load("client", initializeGapiClient);
         }
 
         async function initializeGapiClient() {
