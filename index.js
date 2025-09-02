@@ -1,17 +1,24 @@
 tokenClient.callback = async () => {
 
     // Busca la configuración en el drive
-    let ArchivosDataFolder;
+    var ArchivosDataFolder;
     try {
         ArchivosDataFolder = await gapi.client.drive.files.list({
             pageSize: 10,
             spaces: "AppDataFolder"
         });
     } catch (err) {
-        document.getElementById('content').innerText = err.message;
+        console.error(err);
         return;
     }
 
-    console.log(ArchivosDataFolder.data);
+    // Existe configuración?
+    if (ArchivosDataFolder.result.files.length == 0) {
+        // Crear la configuración y cargarla
+    } else {
+        // Cargar la configuración
+    }
+
+
 
 }
