@@ -24,7 +24,6 @@
                 discoveryDocs: [DISCOVERY_DOC],
             });
             gapiInited = true;
-            maybeEnableButtons();
         }
 
         function gisLoaded() {
@@ -43,7 +42,7 @@
 </head>
 
 <body>
-    <button onclick="tokenClient.requestAccessToken({prompt: 'consent'});">Iniciar sesión</button>
+    <button onclick="tokenClient.requestAccessToken();">Iniciar</button>
 </body>
 
 </html>
