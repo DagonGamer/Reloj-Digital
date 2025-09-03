@@ -17,13 +17,16 @@ tokenClient.callback = async () => {
     if (ArchivosDataFolder.result.files.length == 0) {
         // Crear la configuración y cargarla
         try {
-            ArchivoConfiguracion = await gapi.client.drive.files.create({
-                requestBody: {
-                    space: "AppDataFolder",
-                    parent: "root",
-                    name: "config.json"
-                },
-                media: await fetch("./defaultConfig.json")
+            console.log("Intentando subir archivo");
+            fetch("./defaultConfig.json").then(async res => {
+                ArchivoConfiguracion = await gapi.client.drive.files.create({
+                    requestBody: {
+                        space: "AppDataFolder",
+                        parent: "root",
+                        name: "config.json"
+                    },
+                    media: res.body.values()
+                });
             });
         } catch (err) {
             console.error(err);
