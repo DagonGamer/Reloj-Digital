@@ -12,9 +12,23 @@ tokenClient.callback = async () => {
         return;
     }
 
+    var ArchivoConfiguracion;
     // Existe configuración?
     if (ArchivosDataFolder.result.files.length == 0) {
         // Crear la configuración y cargarla
+        try {
+            ArchivoConfiguracion = await gapi.client.drive.files.create({
+                requestBody: {
+                    space: "AppDataFolder",
+                    parent: "root",
+                    name: "config.json"
+                },
+                media: await fetch("./defaultConfig.json")
+            });
+        } catch (err) {
+            console.error(err);
+            return;
+        }
     } else {
         // Cargar la configuración
     }
@@ -22,3 +36,13 @@ tokenClient.callback = async () => {
 
 
 }
+
+/*
+    Buscar en la carpeta mi unidad
+    await gapi.client.drive.files.list({
+            pageSize: 10,
+            spaces: "drive",
+			q: "'root' in parents"
+        });
+    para buscar en otra carpeta escribir su ID entre las comillas simples
+*/

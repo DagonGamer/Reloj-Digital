@@ -39,11 +39,28 @@
     <script src="https://accounts.google.com/gsi/client" onload="gisLoaded()" async></script>
     <script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
     <script src="index.js"></script>
+    <script src="Options.js"></script>
+
+    <link rel="stylesheet" href="index.css">
 
 </head>
 
 <body>
-    <button onclick="tokenClient.requestAccessToken();">Cargar Reloj</button>
+
+    <button id="SignIn" onclick="tokenClient.requestAccessToken();">Cargar Reloj</button>
+
+    <div class="Reloj">
+
+    </div>
+
+    <div class="Menu">
+
+    </div>
+
+    <div class="Config">
+
+    </div>
+
 </body>
 
 </html>
