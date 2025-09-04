@@ -21,3 +21,8 @@ var OpcionesFuentes = {
     "Sometype Mono": ["Regular.ttf", "Bold.ttf", "BoldItalic.ttf", "Italic.ttf", "Medium.ttf", "MediumItalic.ttf"],
     "Summer Spicy": ["Regular.ttf"],
 }
+
+var VariablesTextos = {
+    "HH": () => "12",
+    
+}
