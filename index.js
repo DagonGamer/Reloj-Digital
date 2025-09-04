@@ -70,10 +70,9 @@ var Start = async () => {
         }
 
         // Carga la configuración
-        ArchivosDataFolder.result.files[0].id
         var Config;
         await gapi.client.request({
-            path: `/drive/v3/files/${fileId}`,
+            path: `/drive/v3/files/${ArchivosDataFolder.result.files[0].id}`,
             method: 'GET',
             params: { alt: 'media' }
         }).then(res => Config = JSON.parse(res.body))
