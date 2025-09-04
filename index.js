@@ -20,7 +20,7 @@ var Start = async () => {
         if (ArchivosDataFolder.result.files.length == 0) {
             // Crear la configuración
             try {
-                console.log("Subiendo archivo");
+                console.log("Subiendo Configuración...");
 
                 // Coge la configuración
                 let defaultConfig;
@@ -70,6 +70,7 @@ var Start = async () => {
         }
 
         // Carga la configuración
+        console.log("Cargando Configuración...");
         var Config;
         await gapi.client.request({
             path: `/drive/v3/files/${ArchivosDataFolder.result.files[0].id}`,
