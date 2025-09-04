@@ -1,4 +1,4 @@
-async function imagenAURL(fileId) {
+async function IDaIMG(fileId) {
     // 1. Obtén metadata para saber el mimeType y nombre
     const meta = await gapi.client.drive.files.get({
         fileId,
@@ -18,8 +18,5 @@ async function imagenAURL(fileId) {
     const blob = await res.blob();
 
     // 3. Crea un File (mantiene el nombre y tipo)
-    const file = new File([blob], name, { type: mimeType });
-
-    // 4. Convierte a URL
-    return URL.createObjectURL(file);
+    return new File([blob], name, { type: mimeType });
 }
