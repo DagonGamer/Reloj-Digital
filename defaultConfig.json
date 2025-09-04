@@ -3,61 +3,13 @@
     "Estilos": [
         {
             "Nombre": "Estilo por defecto",
-            "Config": {
-                "Tipo": "Simple",
-                "MostrarSegundos": false,
-                "MostrarFecha": true,
-                "FormatoFecha": "DD/MM/AAAA",
-                "MostrarDiaSemana": true,
-                "FormatoDiaSemana": "Corto",
-                "Tamano": 10,
-                "Color": "#ffffff",
-                "PosicionX": "Centro",
-                "PosicionY": "Arriba",
-                "FuenteTexto": {
-                    "Nombre": "Digital 7",
-                    "Modo": "Regular.ttf"
-                },
-                "PosicionFecha": "Arriba",
-                "Opacidad": 1,
-                "Sombra": {
-                    "Display": true,
-                    "Color": "#000000",
-                    "DesplazamientoX": 1,
-                    "DesplazamientoY": 1,
-                    "RadioDesenfoque": 3,
-                    "Aumento": 0.3
-                },
-                "Contorno": {
-                    "Display": false,
-                    "Padding": 1,
-                    "Color": "#444444",
-                    "Opacidad": 0.4,
-                    "Redondeo": 1,
-                    "Sombra": {
-                        "Display": false,
-                        "Color": "#000000",
-                        "DesplazamientoX": 1,
-                        "DesplazamientoY": 1,
-                        "RadioDesenfoque": 3,
-                        "Aumento": 0.3
-                    }
-                }
-            }
-        },
-        {
-            "Nombre": "Estilo por defecto 2",
-            "Config": {
-                "Tipo": "Avanzada",
-                "MostrarSegundos": false,
-                "FormatoFecha": "DD/MM/AAAA",
-                "FormatoDiaSemana": "Corto",
-                "Hora": {
-                    "Display": true,
+            "Textos": [
+                {
+                    "Contenido": "$Hour$:$Minutes$",
                     "Altura": 5,
                     "Ancho": "auto",
-                    "PosicionX": "Izquierda",
-                    "PosicionY": "Arriba",
+                    "AnclajeX": "Izquierda",
+                    "AnclajeY": "Arriba",
                     "DesplazamientoX": 3,
                     "DesplazamientoY": 4,
                     "Tamano": 5,
@@ -90,86 +42,8 @@
                             "Aumento": 0.3
                         }
                     }
-                },
-                "Fecha": {
-                    "Display": true,
-                    "Altura": 5,
-                    "Ancho": "auto",
-                    "PosicionX": "Izquierda",
-                    "PosicionY": "Arriba",
-                    "DesplazamientoX": 3,
-                    "DesplazamientoY": 4,
-                    "Tamano": 5,
-                    "Color": "#000000",
-                    "Opacidad": 1,
-                    "FuenteTexto": {
-                        "Nombre": "Digital 7",
-                        "Modo": "Regular.ttf"
-                    },
-                    "Sombra": {
-                        "Display": true,
-                        "Color": "#000000",
-                        "DesplazamientoX": 1,
-                        "DesplazamientoY": 1,
-                        "RadioDesenfoque": 3,
-                        "Aumento": 0.3
-                    },
-                    "Contorno": {
-                        "Display": false,
-                        "Padding": 1,
-                        "Color": "#444444",
-                        "Opacidad": 0.4,
-                        "Redondeo": 1,
-                        "Sombra": {
-                            "Display": false,
-                            "Color": "#000000",
-                            "DesplazamientoX": 1,
-                            "DesplazamientoY": 1,
-                            "RadioDesenfoque": 3,
-                            "Aumento": 0.3
-                        }
-                    }
-                },
-                "DiaSemana": {
-                    "Display": true,
-                    "Altura": 5,
-                    "Ancho": "auto",
-                    "PosicionX": "Izquierda",
-                    "PosicionY": "Arriba",
-                    "DesplazamientoX": 3,
-                    "DesplazamientoY": 4,
-                    "Tamano": 5,
-                    "Color": "#000000",
-                    "Opacidad": 1,
-                    "FuenteTexto": {
-                        "Nombre": "Digital 7",
-                        "Modo": "Regular.ttf"
-                    },
-                    "Sombra": {
-                        "Display": true,
-                        "Color": "#000000",
-                        "DesplazamientoX": 1,
-                        "DesplazamientoY": 1,
-                        "RadioDesenfoque": 3,
-                        "Aumento": 0.3
-                    },
-                    "Contorno": {
-                        "Display": false,
-                        "Padding": 1,
-                        "Color": "#444444",
-                        "Opacidad": 0.4,
-                        "Redondeo": 1,
-                        "Sombra": {
-                            "Display": false,
-                            "Color": "#000000",
-                            "DesplazamientoX": 1,
-                            "DesplazamientoY": 1,
-                            "RadioDesenfoque": 3,
-                            "Aumento": 0.3
-                        }
-                    }
                 }
-            }
+            ]
         }
     ],
     "Imagenes": [
@@ -177,7 +51,7 @@
             "Tipo": "Carpeta",
             "Espacio": "drive",
             "ID": "1MyyZbqViF92aEFiFfX72lmOTFvTLAkG1",
-            "Estilo": "Estilo por defecto 2"
+            "Estilo": "Estilo por defecto"
         }
     ]
 }

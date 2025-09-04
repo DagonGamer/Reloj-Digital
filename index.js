@@ -2,6 +2,8 @@ var Start = async () => {
 
     tokenClient.callback = async () => {
 
+        let accessToken = gapi.client.getToken().access_token;
+
         // Busca la configuración en el drive
         var ArchivosDataFolder;
         try {
@@ -14,34 +16,71 @@ var Start = async () => {
             return;
         }
 
-        var ArchivoConfiguracion;
         // Existe configuración?
         if (ArchivosDataFolder.result.files.length == 0) {
-            // Crear la configuración y cargarla
+            // Crear la configuración
             try {
-                console.log("Intentando subir archivo");
-                fetch("./defaultConfig.json").then(async res => {
-                    ArchivoConfiguracion = await gapi.client.drive.files.create({
-                        requestBody: {
-                            space: "AppDataFolder",
-                            parent: "root",
-                            name: "config.json"
-                        },
-                        media: res.body.values()
-                    });
-                });
+                console.log("Subiendo archivo");
+
+                // Coge la configuración
+                let defaultConfig;
+                await fetch("./defaultConfig.json")
+                    .then(res => res.blob())
+                    .then(blob => defaultConfig = blob)
+
+                // Escribe los metadatos
+                let metadata = {
+                    name: "Config.json",
+                    parents: ['appDataFolder']
+                };
+
+                // Crea los datos para el body
+                let form = new FormData();
+                form.append(
+                    'metadata',
+                    new Blob([JSON.stringify(metadata)], { type: 'application/json' })
+                );
+                form.append(
+                    'file',
+                    defaultConfig
+                );
+
+                // Llamada HTTP para subir archivo
+                let response = await fetch(
+                    'https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart&fields=id',
+                    {
+                        method: 'POST',
+                        headers: { Authorization: 'Bearer ' + accessToken },
+                        body: form
+                    }
+                );
+
+                console.log(response)
+
             } catch (err) {
                 console.error(err);
                 return;
             }
-        } else {
-            // Cargar la configuración
+
+            // Reactualiza los archivos
+            ArchivosDataFolder = await gapi.client.drive.files.list({
+                pageSize: 10,
+                spaces: "AppDataFolder"
+            });
         }
 
-
+        // Carga la configuración
+        ArchivosDataFolder.result.files[0].id
+        var Config;
+        await gapi.client.request({
+            path: `/drive/v3/files/${fileId}`,
+            method: 'GET',
+            params: { alt: 'media' }
+        }).then(res => Config = JSON.parse(res.body))
+        console.log(Config);
 
     }
-    
+
 }
 
 /* Para subir archivo
@@ -144,4 +183,32 @@ async function updateAppDataFile(fileId, newName, content) {
   // 4. Retorna el resultado
   return response.result;
 }
+*/
+
+/*
+ * Descarga el contenido bruto de un archivo de appDataFolder.
+ *
+ * @param {string} fileId  ID del archivo en Drive.
+ * @returns {Promise<string|ArrayBuffer>}  Texto plano o datos binarios.
+ *
+async function readAppDataFileWithGapi(fileId) {
+  // Hacemos la petición GET con alt=media para recuperar solo el contenido
+  const response = await gapi.client.request({
+    path: `/drive/v3/files/${fileId}`,
+    method: 'GET',
+    params: { alt: 'media' }
+  });
+
+  // gapi devuelve el cuerpo en response.body
+  return response.body;
+}
+
+// Ejemplo de uso
+readAppDataFileWithGapi('TU_FILE_ID')
+  .then(content => {
+    // Si es JSON
+    const data = JSON.parse(content);
+    console.log('Contenido JSON:', data);
+  })
+  .catch(err => console.error('Error descargando:', err));
 */
