@@ -1,3 +1,4 @@
+var Config;
 var Start = async () => {
 
     tokenClient.callback = async () => {
@@ -71,7 +72,6 @@ var Start = async () => {
 
         // Carga la configuración
         console.log("Cargando Configuración...");
-        var Config;
         await gapi.client.request({
             path: `/drive/v3/files/${ArchivosDataFolder.result.files[0].id}`,
             method: 'GET',
