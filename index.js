@@ -47,7 +47,7 @@ var Start = async () => {
 
         CargarImagen("div.Reloj.NoWaiting");
         //CargarImagen("div.Reloj.Waiting");
-        IntervaloCarga = setInterval(CargarImagen, /*Config.Delay*1000*/ 3000, "div.Reloj.NoWaiting");
+        IntervaloCarga = setInterval(CargarImagen, Config.Delay*1000, "div.Reloj.NoWaiting");
 
     }
 
