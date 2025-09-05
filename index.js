@@ -1,4 +1,4 @@
-var Config, OrdenFotos;
+var Config, OrdenFotos = [];
 
 var Start = async () => {
 
@@ -81,7 +81,8 @@ var Start = async () => {
         console.log(Config);
 
         // Organiza el orden de las fotos
-        OrganizarFotos();
+        console.log("Organizando fotos...");
+        await OrganizarFotos();
 
     }
 

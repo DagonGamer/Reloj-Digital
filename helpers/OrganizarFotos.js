@@ -23,6 +23,6 @@ var OrganizarFotos = () => async () => {
         else await anadirFotosCarpeta(dato.ID, dato.Estilo);
     }
     
-    console.log(OrdenFotos);
+    console.log("Orden de las fotos: ", OrdenFotos);
 
 }
