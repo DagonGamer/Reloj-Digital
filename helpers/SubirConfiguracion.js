@@ -46,12 +46,12 @@ var SubirConfiguracion = async () => {
 
 var ActualizarConfiguracion = async () => {
 
-    const fileId = await gapi.client.drive.files.list({
+    const fileId = (await gapi.client.drive.files.list({
         spaces: 'appDataFolder',
         q: `name = 'Config.json' and trashed = false`,
         fields: 'files(id, name, mimeType)',
         pageSize: 1
-    }).result.files[0].id;
+    })).result.files[0].id;
 
     const form = new FormData();
     form.append(
