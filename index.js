@@ -1,4 +1,4 @@
-var Config;
+var Config, OrdenFotos;
 
 var Start = async () => {
 
@@ -79,6 +79,9 @@ var Start = async () => {
             params: { alt: 'media' }
         }).then(res => Config = JSON.parse(res.body))
         console.log(Config);
+
+        // Organiza el orden de las fotos
+        OrganizarFotos();
 
     }
 
