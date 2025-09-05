@@ -1,11 +1,12 @@
-var Config, OrdenFotos, IdxImagen = 0;
+var Config, OrdenFotos, IdxImagen = 0, accessToken;
 
 var sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 var Start = async () => {
 
     tokenClient.callback = async () => {
-        var accessToken = gapi.client.getToken().access_token;
+
+        accessToken = gapi.client.getToken().access_token;
 
         // Busca la configuración en el drive
         var ArchivosDataFolder;
