@@ -6,7 +6,6 @@ var DescargarImagenes = async () => {
         if (!OrdenFotos[i][0].includes("blob:https")) 
             await IDaIMG(OrdenFotos[i][0])
                 .then(file => OrdenFotos[i][0] = URL.createObjectURL(file));
-        console.log(Math.floor(i/OrdenFotos.length*100));
         if (Percentage != Math.floor(i/OrdenFotos.length*100)) {
             Percentage = Math.floor(i/OrdenFotos.length*100);
             console.log(`${Percentage}% de las imágenes cargadas.`);
