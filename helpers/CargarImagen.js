@@ -38,7 +38,7 @@ var CargarImagen = async (selector) => {
 
         let nuevoTexto = document.createElement("p");
         nuevoTexto.setAttribute("Input", texto.Contenido);
-        nuevoTexto.style.position = fixed;
+        nuevoTexto.style.position = "fixed";
         nuevoTexto.style.height = texto.Altura;
         nuevoTexto.style.width = texto.Ancho;
 
