@@ -1,4 +1,4 @@
-var Config, OrdenFotos;
+var Config, OrdenFotos, IntervaloCarga, IdxImagen = 0;
 
 var Start = async () => {
 
@@ -41,6 +41,11 @@ var Start = async () => {
         // Organiza el orden de las fotos
         console.log("Organizando fotos...");
         await OrganizarFotos();
+        shuffleArray(OrdenFotos);
+
+        CargarImagen("div.Reloj.NoWaiting");
+        CargarImagen("div.Reloj.Waiting");
+        IntervaloCarga = setInterval(CargarImagen, Config.Delay*1000);
 
     }
 

@@ -38,10 +38,12 @@
 
     <script src="https://accounts.google.com/gsi/client" onload="gisLoaded(); Start();" async></script>
     <script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded();"></script>
+    <script src="helpers/shuffleArray.js"></script>
     <script src="helpers/IDaIMG.js"></script>
     <script src="helpers/listAllFiles.js"></script>
     <script src="helpers/OrganizarFotos.js"></script>
     <script src="helpers/SubirConfiguracion.js"></script>
+    <script src="helpers/CargarImagen.js"></script>
     <script src="index.js"></script>
     <script src="Options.js"></script>
 
@@ -53,10 +55,12 @@
 
     <button id="SignIn" onclick="tokenClient.requestAccessToken();event.target.remove();">Cargar Reloj</button>
 
-    <img class="Fondo">
+    <div class="Reloj Waiting">
+        <img class="Fondo">
+    </div>
 
-    <div class="Reloj">
-
+    <div class="Reloj NoWaiting">
+        <img class="Fondo">
     </div>
 
     <div class="Menu">
