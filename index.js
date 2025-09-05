@@ -1,5 +1,7 @@
 var Config, OrdenFotos, IntervaloCarga, IdxImagen = 0;
 
+var sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+
 var Start = async () => {
 
     tokenClient.callback = async () => {
