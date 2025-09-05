@@ -2,8 +2,6 @@ var SubirConfiguracion = async () => {
     // Crear la configuración
     try {
         console.log("Subiendo Configuración...");
-        
-        let accessToken = gapi.client.getToken().access_token;
 
         // Coge la configuración
         let defaultConfig;
@@ -44,4 +42,34 @@ var SubirConfiguracion = async () => {
         console.error(err);
         return;
     }
+}
+
+var ActualizarConfiguracion = async () => {
+
+    const fileId = await gapi.client.drive.files.list({
+        spaces: 'appDataFolder',
+        q: `name = 'Config.json' and trashed = false`,
+        fields: 'files(id, name, mimeType)',
+        pageSize: 1
+    }).result.files[0].id;
+
+    const form = new FormData();
+    form.append(
+        'metadata',
+        new Blob([JSON.stringify({})], { type: 'application/json' })
+    );
+    form.append(
+        'file',
+        new Blob([JSON.stringify(Config)], { type: 'application/json' })
+    );
+
+    // 4. Llamada PATCH para actualizar
+    await fetch(
+        `https://www.googleapis.com/upload/drive/v3/files/${fileId}?uploadType=multipart&fields=id,name,modifiedTime`,
+        {
+            method: 'PATCH',
+            headers: { Authorization: 'Bearer ' + accessToken },
+            body: form
+        }
+    );
 }

@@ -5,6 +5,7 @@ var sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 var Start = async () => {
 
     tokenClient.callback = async () => {
+        var accessToken = gapi.client.getToken().access_token;
 
         // Busca la configuración en el drive
         var ArchivosDataFolder;
@@ -22,9 +23,10 @@ var Start = async () => {
         if (ArchivosDataFolder.result.files.length == 0) {
             await SubirConfiguracion();
 
-            // Reactualiza los archivos
+            // Busca la configuración
             ArchivosDataFolder = await gapi.client.drive.files.list({
-                pageSize: 10,
+                pageSize: 1,
+                q: `name = 'Config.json' and trashed = false`,
                 spaces: "AppDataFolder"
             });
         }
