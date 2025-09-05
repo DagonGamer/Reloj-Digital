@@ -12,7 +12,7 @@
                     "AnclajeY": "Arriba",
                     "DesplazamientoX": "0vw",
                     "DesplazamientoY": "2vh",
-                    "Tamano": "25vw",
+                    "Tamano": "40vw",
                     "Color": "white",
                     "Opacidad": 1,
                     "Alineamiento": "center",
@@ -21,11 +21,11 @@
                         "Modo": "Regular.ttf"
                     },
                     "Sombra": {
-                        "Display": false,
+                        "Display": true,
                         "Color": "#000000",
                         "DesplazamientoX": "1vw",
                         "DesplazamientoY": "1vw",
-                        "RadioDesenfoque": "3vw"
+                        "RadioDesenfoque": "2vw"
                     },
                     "Contorno": {
                         "Display": false,
