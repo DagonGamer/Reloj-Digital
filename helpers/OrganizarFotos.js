@@ -13,7 +13,7 @@ let anadirFotosCarpeta = async (id, estilo) => {
 
 }
 
-var OrganizarFotos = () => async () => {
+var OrganizarFotos = async () => {
 
     OrdenFotos = [];
 
