@@ -1,4 +1,4 @@
-var Config, OrdenFotos, IntervaloCarga, IdxImagen = 0;
+var Config, OrdenFotos, IdxImagen = 0;
 
 var sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -45,9 +45,9 @@ var Start = async () => {
         await OrganizarFotos();
         shuffleArray(OrdenFotos);
 
-        CargarImagen("div.Reloj.NoWaiting");
-        CargarImagen("div.Reloj.Waiting");
-        IntervaloCarga = setInterval(CambiarImagen, Config.Delay*1000);
+        await CargarImagen("div.Reloj.NoWaiting");
+        setTimeout(CambiarImagen, Config.Delay*1000);
+        await CargarImagen("div.Reloj.Waiting");
 
     }
 

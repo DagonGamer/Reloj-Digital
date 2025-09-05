@@ -24,6 +24,7 @@ var CambiarImagen = async () => {
     NoWaiting.classList.add("Waiting");
     NoWaiting.style.opacity = 1;
 
-    CargarImagen("div.Reloj.Waiting");
+    setTimeout(CambiarImagen, Config.Delay*1000);
+    await CargarImagen("div.Reloj.Waiting");
 
 }
