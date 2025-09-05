@@ -63,6 +63,7 @@ var CargarImagen = async (selector) => {
         nuevoTexto.style.fontSize = texto.Tamano;
         nuevoTexto.style.color = texto.Color;
         nuevoTexto.style.opacity = texto.Opacidad;
+        nuevoTexto.style.textAlign = texto.Alineamiento;
 
         css.innerHTML += `
             @font-face {
@@ -83,8 +84,6 @@ var CargarImagen = async (selector) => {
             if (texto.Contorno.Sombra.Display)
                 nuevoTexto.style.boxShadow = `${texto.Contorno.Sombra.DesplazamientoX} ${texto.Contorno.Sombra.DesplazamientoY} ${texto.Contorno.Sombra.RadioDesenfoque} ${texto.Contorno.Sombra.Aumento} ${texto.Contorno.Sombra.Color}`;
         }
-
-        nuevoTexto.innerText = "jfdñasjhdfas";
         element.appendChild(nuevoTexto);
 
     }
@@ -93,6 +92,7 @@ var CargarImagen = async (selector) => {
     IdxImagen++;
     if (IdxImagen == OrdenFotos.length)
         IdxImagen = 0;
+    ActualizarTextos();
 
 }
 

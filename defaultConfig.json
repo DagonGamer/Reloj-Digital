@@ -1,26 +1,27 @@
 {
-    "Delay": 60,
+    "Delay": 10,
     "Estilos": [
         {
             "Nombre": "Estilo por defecto",
             "Textos": [
                 {
                     "Contenido": "$Hour$:$Minutes$",
-                    "Altura": "5vh",
-                    "Ancho": "auto",
+                    "Altura": "auto",
+                    "Ancho": "100vw",
                     "AnclajeX": "Izquierda",
                     "AnclajeY": "Arriba",
-                    "DesplazamientoX": "3vw",
-                    "DesplazamientoY": "4vh",
-                    "Tamano": "5vw",
-                    "Color": "#000000",
+                    "DesplazamientoX": "0vw",
+                    "DesplazamientoY": "2vh",
+                    "Tamano": "25vw",
+                    "Color": "white",
                     "Opacidad": 1,
+                    "Alineamiento": "center",
                     "Fuente": {
                         "Nombre": "Digital 7",
                         "Modo": "Regular.ttf"
                     },
                     "Sombra": {
-                        "Display": true,
+                        "Display": false,
                         "Color": "#000000",
                         "DesplazamientoX": "1vw",
                         "DesplazamientoY": "1vw",
