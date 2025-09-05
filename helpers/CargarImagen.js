@@ -1,3 +1,19 @@
+var DescargarImagenes = async () => {
+
+    let Percentage = 0;
+    console.log("Descargando imágenes...");
+    for (let i = 0; i < OrdenFotos.length; i++) {
+        if (!OrdenFotos[i][0].includes("blob:https")) 
+            await IDaIMG(OrdenFotos[i][0])
+                .then(file => OrdenFotos[i][0] = URL.createObjectURL(file));
+        if (Percentage != Math.floor(i/OrdenFotos.length)*10) {
+            Percentage = Math.floor(i/OrdenFotos.length)*10;
+            console.log(`${Percentage*10}% de las imágenes cargadas.`);
+        }
+    }
+
+}
+
 var CargarImagen = async (selector) => {
 
     let element = document.querySelector(selector);
@@ -25,6 +41,7 @@ var CambiarImagen = async () => {
     NoWaiting.style.opacity = 1;
 
     setTimeout(CambiarImagen, Config.Delay*1000);
+    console.log("Imagen cambiada.");
     await CargarImagen("div.Reloj.Waiting");
 
 }
