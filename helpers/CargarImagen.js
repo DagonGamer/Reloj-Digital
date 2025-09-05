@@ -67,7 +67,7 @@ var CargarImagen = async (selector) => {
         css.innerHTML += `
             @font-face {
                 font-family: Texto${i};
-                src: url("Fuentes/${texto.Fuente.Nombre}/${texto.Fuente.Modo}");
+                src: url("Fuentes/${texto.Fuente.Nombre}/${texto.Fuente.Nombre}-${texto.Fuente.Modo}");
             }
         `;
 
