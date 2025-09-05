@@ -40,7 +40,7 @@ div.Reloj {
     z-index: 10;
 }
 
-img.Fondo {
+div.Reloj img.Fondo {
     position: fixed;
     top: 0px;
     left: 0px;
@@ -50,4 +50,10 @@ img.Fondo {
     border-radius: 0px;
     object-fit: cover;
     z-index: 0;
+}
+
+div.Reloj p {
+    position: fixed;
+    z-index: 1;
+    margin: 0px;
 }
