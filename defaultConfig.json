@@ -6,13 +6,13 @@
             "Textos": [
                 {
                     "Contenido": "$Hour$:$Minutes$",
-                    "Altura": 5,
+                    "Altura": "5vh",
                     "Ancho": "auto",
                     "AnclajeX": "Izquierda",
                     "AnclajeY": "Arriba",
-                    "DesplazamientoX": 3,
-                    "DesplazamientoY": 4,
-                    "Tamano": 5,
+                    "DesplazamientoX": "3vw",
+                    "DesplazamientoY": "4vh",
+                    "Tamano": "5vw",
                     "Color": "#000000",
                     "Opacidad": 1,
                     "Fuente": {
@@ -22,17 +22,15 @@
                     "Sombra": {
                         "Display": true,
                         "Color": "#000000",
-                        "DesplazamientoX": 1,
-                        "DesplazamientoY": 1,
-                        "RadioDesenfoque": 3,
-                        "Aumento": 0.3
+                        "DesplazamientoX": "1vw",
+                        "DesplazamientoY": "1vw",
+                        "RadioDesenfoque": "3vw"
                     },
                     "Contorno": {
                         "Display": false,
-                        "Padding": 1,
+                        "Padding": "1vw",
                         "Color": "#444444",
-                        "Opacidad": 0.4,
-                        "Redondeo": 1,
+                        "Redondeo": "1vw",
                         "Sombra": {
                             "Display": false,
                             "Color": "#000000",
