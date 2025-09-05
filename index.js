@@ -48,6 +48,7 @@ var Start = async () => {
         await CargarImagen("div.Reloj.NoWaiting");
         setTimeout(CambiarImagen, Config.Delay*1000);
         await CargarImagen("div.Reloj.Waiting");
+        setInterval(ActualizarTextos, 250);
         DescargarImagenes();
 
     }

@@ -23,6 +23,6 @@ var OpcionesFuentes = {
 }
 
 var VariablesTextos = {
-    "HH": () => "12",
-    
+    "Hour": () => "12",
+    "Minutes": () => "23"
 }
