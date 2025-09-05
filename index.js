@@ -6,8 +6,6 @@ var Start = async () => {
 
     tokenClient.callback = async () => {
 
-        let accessToken = gapi.client.getToken().access_token;
-
         // Busca la configuración en el drive
         var ArchivosDataFolder;
         try {

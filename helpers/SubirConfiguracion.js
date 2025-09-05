@@ -2,6 +2,8 @@ var SubirConfiguracion = async () => {
     // Crear la configuración
     try {
         console.log("Subiendo Configuración...");
+        
+        let accessToken = gapi.client.getToken().access_token;
 
         // Coge la configuración
         let defaultConfig;
