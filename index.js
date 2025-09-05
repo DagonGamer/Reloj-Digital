@@ -46,8 +46,8 @@ var Start = async () => {
         shuffleArray(OrdenFotos);
 
         CargarImagen("div.Reloj.NoWaiting");
-        CargarImagen("div.Reloj.Waiting");
-        IntervaloCarga = setInterval(CargarImagen, Config.Delay*1000);
+        //CargarImagen("div.Reloj.Waiting");
+        IntervaloCarga = setInterval(CargarImagen, /*Config.Delay*1000*/ 3000, "div.Reloj.NoWaiting");
 
     }
 
