@@ -73,3 +73,34 @@ var ActualizarConfiguracion = async () => {
         }
     );
 }
+
+async function formatearAppDataFiles() {
+    try {
+        // 1. Listar archivos en appDataFolder
+        const listRes = await gapi.client.drive.files.list({
+            spaces: 'appDataFolder',
+            fields: 'files(id, name)'
+        });
+        const files = listRes.result.files;
+
+        if (!files || files.length === 0) {
+            alert('No hay archivos en appDataFolder.');
+            return;
+        }
+
+        // 2. Eliminar cada archivo
+        for (const file of files) {
+            try {
+                await gapi.client.drive.files.delete({ fileId: file.id });
+                console.log(`Eliminado: ${file.name} (${file.id})`);
+            } catch (err) {
+                console.error(`Error eliminando ${file.name}:`, err);
+            }
+        }
+
+        alert(`Proceso completado. Se procesaron ${files.length} archivos.`);
+    } catch (err) {
+        console.error('Error listando o eliminando archivos:', err);
+        alert('Ocurrió un error. Revisa la consola para más detalles.');
+    }
+}
