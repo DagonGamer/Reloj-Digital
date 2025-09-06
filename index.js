@@ -50,9 +50,9 @@ var Start = async () => {
         shuffleArray(OrdenFotos);
 
         await CargarImagen("div.Reloj.NoWaiting");
+        setInterval(ActualizarTextos, 250);
         setTimeout(CambiarImagen, Config.Delay*1000);
         await CargarImagen("div.Reloj.Waiting");
-        setInterval(ActualizarTextos, 250);
         DescargarImagenes();
 
     }
