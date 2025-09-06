@@ -130,4 +130,5 @@ div.Menu div.Progress div {
     height: 1vh;
     width: calc(95vw * var(--Progress) / 100);
     border-radius: 100vw;
+    transition: all 0.1s;
 }
