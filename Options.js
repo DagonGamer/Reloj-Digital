@@ -23,7 +23,7 @@ var OpcionesFuentes = {
 }
 
 var VariablesTextos = {
-    "Hour": () => (new Date()).getHours(),
-    "Minutes": () => (new Date()).getMinutes(),
-    "Segundos": () => (new Date()).getSeconds()
+    "Hour": () => (new Date()).getHours().toString().padStart(2, "0"),
+    "Minutes": () => (new Date()).getMinutes().toString().padStart(2, "0"),
+    "Segundos": () => (new Date()).getSeconds().toString().padStart(2, "0")
 }
