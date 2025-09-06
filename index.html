@@ -85,7 +85,7 @@
 
         <div class="Input">
             <p>Retraso (en segundos): </p>
-            <input type="text" class="Delay">
+            <input type="text" class="Delay" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
         </div>
 
         <button>Añadir imágenes</button>
