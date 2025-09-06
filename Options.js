@@ -20,6 +20,7 @@ var OpcionesFuentes = {
     "Samanta Creative": ["Regular.otf"],
     "Sometype Mono": ["Regular.ttf", "Bold.ttf", "BoldItalic.ttf", "Italic.ttf", "Medium.ttf", "MediumItalic.ttf"],
     "Summer Spicy": ["Regular.ttf"],
+    "Blogger Sans": ["Regular.ttf", "Bold.ttf", "BoldItalic.ttf", "Italic.ttf", "Light.ttf", "LightItalic.ttf", "Medium.ttf", "MediumItalic.ttf"]
 }
 
 var VariablesTextos = {

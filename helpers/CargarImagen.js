@@ -17,8 +17,7 @@ var DescargarImagenes = async () => {
 }
 
 var CargarImagen = async (selector) => {
-
-    let Body = document.querySelector("body");
+    
     let element = document.querySelector(selector);
 
     // Busca el estilo de la imagen
@@ -29,10 +28,6 @@ var CargarImagen = async (selector) => {
         await IDaIMG(OrdenFotos[IdxImagen][0])
             .then(file => OrdenFotos[IdxImagen][0] = URL.createObjectURL(file));
     element.querySelector("img.Fondo").src = OrdenFotos[IdxImagen][0];
-
-    // Prepara un css extra para cosas
-    let css = document.createElement("style");
-    element.appendChild(css);
 
     // Carga los textos
     for (let i = 0; i < Estilo.Textos.length; i++) {
@@ -65,15 +60,7 @@ var CargarImagen = async (selector) => {
         nuevoTexto.style.color = texto.Color;
         nuevoTexto.style.opacity = texto.Opacidad;
         nuevoTexto.style.textAlign = texto.Alineamiento;
-
-        css.innerHTML += `
-            @font-face {
-                font-family: Texto${i};
-                src: url("Fuentes/${texto.Fuente.Nombre}/${texto.Fuente.Nombre}-${texto.Fuente.Modo}");
-            }
-        `;
-
-        nuevoTexto.style.fontFamily = `Texto${i}`;
+        nuevoTexto.style.fontFamily = `'${texto.Fuente.Nombre}-${texto.Fuente.Modo}'`;
 
         if (texto.Sombra.Display)
             nuevoTexto.style.textShadow = `${texto.Sombra.Color} ${texto.Sombra.DesplazamientoX} ${texto.Sombra.DesplazamientoY} ${texto.Sombra.RadioDesenfoque}`;

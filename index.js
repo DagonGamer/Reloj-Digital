@@ -2,6 +2,8 @@ var Config, OrdenFotos, IdxImagen = 0, accessToken;
 
 var sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
+CargarFuentes();
+
 var Start = async () => {
 
     tokenClient.callback = async () => {
