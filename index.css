@@ -143,5 +143,5 @@ div.Menu button {
 }
 
 div.Menu button:hover {
-    font-size: 9dvw;
+    transform: scale(1.15);
 }
