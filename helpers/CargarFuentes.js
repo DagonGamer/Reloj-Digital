@@ -6,8 +6,8 @@ var CargarFuentes = () => {
         for (let opcion of OpcionesFuentes[fuente])
             css.innerHTML += `
                 @font-face {
-                    font-family: '${texto.Fuente.Nombre}-${texto.Fuente.Modo}';
-                    src: url("Fuentes/${texto.Fuente.Nombre}/${texto.Fuente.Nombre}-${texto.Fuente.Modo}");
+                    font-family: '${fuente}-${opcion}';
+                    src: url("Fuentes/${fuente}/${fuente}-${opcion}");
                 }
             `;
 
