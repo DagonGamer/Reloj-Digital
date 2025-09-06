@@ -6,8 +6,8 @@ var DescargarImagenes = async () => {
         if (!OrdenFotos[i][0].includes("blob:https"))
             await IDaIMG(OrdenFotos[i][0])
                 .then(file => OrdenFotos[i][0] = URL.createObjectURL(file));
-        document.querySelector("div.Menu div.Progress").style = `--Progress: ${i / OrdenFotos.length * 100};`;
-        document.querySelector("div.Menu p.Porcentaje").innerText = `${Math.floor(i / OrdenFotos.length * 1000) / 10}%`;
+        document.querySelector("div.RedDeClick div.Progress").style = `--Progress: ${i / OrdenFotos.length * 100};`;
+        document.querySelector("div.RedDeClick p.Porcentaje").innerText = `${Math.floor(i / OrdenFotos.length * 1000) / 10}%`;
         if (Percentage != Math.floor(i / OrdenFotos.length * 10) * 10) {
             Percentage = Math.floor(i / OrdenFotos.length * 10) * 10;
             console.log(`${Percentage}% de las imágenes cargadas.`);
@@ -17,7 +17,7 @@ var DescargarImagenes = async () => {
 }
 
 var CargarImagen = async (selector) => {
-    
+
     let element = document.querySelector(selector);
 
     // Busca el estilo de la imagen
