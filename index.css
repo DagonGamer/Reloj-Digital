@@ -167,4 +167,7 @@ div.Menu input[type="text"] {
 	border-radius: 100dvw;
 	border: none;
 	color: white;
+	width: 50dvw;
+	padding: 0px;
+	margin: 0px 15dvw;
 }
