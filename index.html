@@ -64,8 +64,10 @@
         <img class="Fondo">
     </div>
 
+    <div class="RedDeClick" onclick="document.querySelector('div.Menu').hidden = false;"></div>
+
     <div class="Menu" hidden>
-        <button>Volver</button>
+        <button onclick="document.querySelector('div.Menu').hidden = true;">Volver</button>
         <button>Configuración</button>
         <button>Cerrar sesión</button>
     </div>
