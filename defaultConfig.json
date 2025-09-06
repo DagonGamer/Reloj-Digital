@@ -7,12 +7,12 @@
                 {
                     "Contenido": "$Hour$:$Minutes$",
                     "Altura": "auto",
-                    "Ancho": "100vw",
+                    "Ancho": "100dvw",
                     "AnclajeX": "Izquierda",
                     "AnclajeY": "Arriba",
-                    "DesplazamientoX": "0vw",
-                    "DesplazamientoY": "2vh",
-                    "Tamano": "40vw",
+                    "DesplazamientoX": "0dvw",
+                    "DesplazamientoY": "2dvh",
+                    "Tamano": "40dvw",
                     "Color": "white",
                     "Opacidad": 1,
                     "Alineamiento": "center",
@@ -23,15 +23,15 @@
                     "Sombra": {
                         "Display": true,
                         "Color": "#000000",
-                        "DesplazamientoX": "1vw",
-                        "DesplazamientoY": "1vw",
-                        "RadioDesenfoque": "2vw"
+                        "DesplazamientoX": "1dvw",
+                        "DesplazamientoY": "1dvw",
+                        "RadioDesenfoque": "2dvw"
                     },
                     "Contorno": {
                         "Display": false,
-                        "Padding": "1vw",
+                        "Padding": "1dvw",
                         "Color": "#444444",
-                        "Redondeo": "1vw",
+                        "Redondeo": "1dvw",
                         "Sombra": {
                             "Display": false,
                             "Color": "#000000",

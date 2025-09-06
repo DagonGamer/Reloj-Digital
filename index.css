@@ -19,7 +19,7 @@ button#SignIn {
     top: 0px;
     left: 0px;
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
     border: none;
     border-radius: 0px;
     background: white;
@@ -33,7 +33,7 @@ div.Reloj {
     top: 0px;
     left: 0px;
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
     border: none;
     border-radius: 0px;
     background: black;
@@ -45,7 +45,7 @@ div.Reloj img.Fondo {
     top: 0px;
     left: 0px;
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
     border: none;
     border-radius: 0px;
     object-fit: cover;
@@ -64,7 +64,7 @@ div.RedDeClick {
     top: 0px;
     left: 0px;
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
     border: none;
     border-radius: 0px;
     z-index: 15;
@@ -76,12 +76,12 @@ div.Menu {
     top: 0px;
     left: 0px;
     width: 80%;
-    height: 80vh;
-    padding: 10vh 10%;
+    height: 80dvh;
+    padding: 10dvh 10%;
     border: none;
     border-radius: 0px;
     background: #0006;
-    backdrop-filter: blur(5vw);
+    backdrop-filter: blur(5dvw);
     display: grid;
     z-index: 20;
     opacity: 1;
@@ -97,44 +97,44 @@ div.Menu.Hidden {
 div.Menu button {
 	background: transparent;
 	border: none;
-	font-size: 10vw;
+	font-size: 10dvw;
 	color: white;
-    text-shadow: white 0px 0px 4vw;
+    text-shadow: white 0px 0px 4dvw;
     transition: all 0.1s;
 }
 
 div.Menu button:hover {
-    font-size: 12.5vw;
+    font-size: 12.5dvw;
 }
 
 div.Menu p {
     color: white;
     position: absolute;
-    bottom: 2.5vh;
-    font-size: 5vw;
-    left: 2.5vw;
+    bottom: 2.5dvh;
+    font-size: 5dvw;
+    left: 2.5dvw;
     margin: 0px;
 }
 
 div.Menu p.Porcentaje {
     left: unset;
-    right: 2.5vw;
+    right: 2.5dvw;
 }
 
 div.Menu div.Progress {
     background: #0008;
     position: absolute;
-    border-radius: 100vw;
-    bottom: 1vh;
-    height: 1vh;
-    width: 95vw;
-    left: 2.5vw;
+    border-radius: 100dvw;
+    bottom: 1dvh;
+    height: 1dvh;
+    width: 95dvw;
+    left: 2.5dvw;
 }
 
 div.Menu div.Progress div {
     background: white;
-    height: 1vh;
-    width: calc(95vw * var(--Progress) / 100);
-    border-radius: 100vw;
+    height: 1dvh;
+    width: calc(95dvw * var(--Progress) / 100);
+    border-radius: 100dvw;
     transition: all 0.1s;
 }
