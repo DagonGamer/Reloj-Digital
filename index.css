@@ -80,7 +80,7 @@ div.Menu {
     padding: 10vh 10%;
     border: none;
     border-radius: 0px;
-    background: #006;
+    background: #0006;
     backdrop-filter: blur(5vw);
     display: grid;
     z-index: 20;
