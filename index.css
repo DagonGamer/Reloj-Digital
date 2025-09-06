@@ -127,6 +127,7 @@ div.Menu {
     opacity: 1;
     pointer-events: all;
     transition: all 0.25s;
+    align-content: center;
 }
 
 div.Menu.Hidden {
@@ -141,6 +142,7 @@ div.Menu button {
 	color: white;
     text-shadow: white 0px 0px 4dvw;
     transition: all 0.1s;
+	height: 15dvw;
 }
 
 div.Menu button:hover {
@@ -148,11 +150,14 @@ div.Menu button:hover {
 }
 
 div.Menu p {
-    font-size: 6dvw;
+	font-size: 6dvw;
 	color: white;
-    text-shadow: white 0px 0px 4dvw;
+	text-shadow: white 0px 0px 4dvw;
 	text-align: center;
-    transition: all 0.1s;
+	transition: all 0.1s;
+	margin: 0px;
+	height: 15dvw;
+	align-content: center;
 }
 
 div.Menu input[type="text"] {
