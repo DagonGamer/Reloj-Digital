@@ -1,0 +1,15 @@
+{
+  "short_name": "Reloj",
+  "name": "Reloj Digital",
+  "icons": [
+    {
+      "src": "manifest.json",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "fullscreen",
+  "theme_color": "black",
+  "background_color": "white"
+}
