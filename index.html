@@ -64,10 +64,10 @@
         <img class="Fondo">
     </div>
 
-    <div class="RedDeClick" onclick="document.querySelector('div.Menu').hidden = false;"></div>
+    <div class="RedDeClick" onclick="document.querySelector('div.Menu').classList.remove('Hidden');"></div>
 
-    <div class="Menu" hidden>
-        <button onclick="document.querySelector('div.Menu').hidden = true;">Volver</button>
+    <div class="Menu Hidden" hidden>
+        <button onclick="document.querySelector('div.Menu').classList.add('Hidden');">Volver</button>
         <button>Configuración</button>
         <button onclick="location.reload();">Cerrar sesión</button>
     </div>
