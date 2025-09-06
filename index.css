@@ -1,6 +1,7 @@
 * {
     overflow: hidden;
     font-family: 'Blogger Sans-Regular.ttf';
+    outline: none;
 }
 
 *.Waiting {

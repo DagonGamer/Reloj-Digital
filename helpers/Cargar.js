@@ -14,3 +14,9 @@ var CargarFuentes = () => {
     document.querySelector("body").appendChild(css);
 
 }
+
+var CargarInputsConfiguracion = () => {
+
+    document.querySelector("input.Delay").value = Config.Delay;
+
+}
