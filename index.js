@@ -42,6 +42,7 @@ var Start = async () => {
             params: { alt: 'media' }
         }).then(res => Config = JSON.parse(res.body))
         console.log(Config);
+        CargarInputsConfiguracion();
 
         // Organiza el orden de las fotos
         console.log("Organizando fotos...");
