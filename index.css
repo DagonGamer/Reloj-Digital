@@ -68,14 +68,15 @@ div.RedDeClick {
     border: none;
     border-radius: 0px;
     z-index: 15;
-    opacity: 0;
     background: #0006;
     backdrop-filter: blur(5dvw);
+    opacity: 1;
 }
 
 div.RedDeClick.Hidden {
     background: transparent;
     backdrop-filter: none;
+    opacity: 0;
 }
 
 
