@@ -66,13 +66,7 @@
         <img class="Fondo">
     </div>
 
-    <div class="RedDeClick" onclick="document.querySelector('div.Menu').classList.remove('Hidden');"></div>
-
-    <div class="Menu Hidden" hidden>
-        <button onclick="document.querySelector('div.Menu').classList.add('Hidden');">Volver</button>
-        <button>Configuración</button>
-        <button onclick="location.reload();">Cerrar sesión</button>
-
+    <div class="RedDeClick Hidden" onclick="document.querySelector('div.Menu').classList.remove('Hidden');document.querySelector('div.RedDeClick').classList.remove('Hidden');">
         <p>Cargando imágenes...</p>
         <p class="Porcentaje">0%</p>
         <div class="Progress" style="--Progress: 2.5;">
@@ -80,8 +74,20 @@
         </div>
     </div>
 
-    <div class="Config">
+    <div class="Menu Hidden" hidden>
+        <button onclick="document.querySelector('div.Menu').classList.add('Hidden');document.querySelector('div.RedDeClick').classList.add('Hidden');">Volver</button>
+        <button>Configuración</button>
+        <button onclick="location.reload();">Cerrar sesión</button>
+    </div>
 
+    <div class="Config">
+        <div class="Delay">
+            <p>Retraso: </p>
+            <input type="text" class="Delay">
+        </div>
+
+        <button>Añadir Imágenes</button>
+        <button>Editar estilos</button>
     </div>
 
     <script src="index.js"></script>

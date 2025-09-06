@@ -69,6 +69,13 @@ div.RedDeClick {
     border-radius: 0px;
     z-index: 15;
     opacity: 0;
+    background: #0006;
+    backdrop-filter: blur(5dvw);
+}
+
+div.RedDeClick.Hidden {
+    background: transparent;
+    backdrop-filter: none;
 }
 
 div.Menu {
@@ -80,8 +87,6 @@ div.Menu {
     padding: 10dvh 10%;
     border: none;
     border-radius: 0px;
-    background: #0006;
-    backdrop-filter: blur(5dvw);
     display: grid;
     z-index: 20;
     opacity: 1;
@@ -107,7 +112,7 @@ div.Menu button:hover {
     font-size: 12.5dvw;
 }
 
-div.Menu p {
+div.RedDeClick p {
     color: white;
     position: absolute;
     bottom: 2.5dvh;
@@ -116,12 +121,12 @@ div.Menu p {
     margin: 0px;
 }
 
-div.Menu p.Porcentaje {
+div.RedDeClick p.Porcentaje {
     left: unset;
     right: 2.5dvw;
 }
 
-div.Menu div.Progress {
+div.RedDeClick div.Progress {
     background: #0008;
     position: absolute;
     border-radius: 100dvw;
@@ -131,7 +136,7 @@ div.Menu div.Progress {
     left: 2.5dvw;
 }
 
-div.Menu div.Progress div {
+div.RedDeClick div.Progress div {
     background: white;
     height: 1dvh;
     width: calc(95dvw * var(--Progress) / 100);
