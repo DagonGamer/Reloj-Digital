@@ -136,17 +136,20 @@ div.Menu.Hidden {
 }
 
 div.Menu button {
-	background: transparent;
+	background: #fff2;
 	border: none;
 	font-size: 6dvw;
 	color: white;
-    text-shadow: white 0px 0px 4dvw;
-    transition: all 0.1s;
+	text-shadow: white 0px 0px 4dvw;
+	transition: all 0.1s;
 	height: 15dvw;
+	border-radius: 4dvw;
+	margin: 1dvw 0px;
 }
 
 div.Menu button:hover {
-    transform: scale(1.15);
+    background: #fff7;
+    font-size: 6.25dvw;
 }
 
 div.Menu p {
