@@ -25,7 +25,6 @@ button#SignIn {
     background: white;
     color: black;
     font-size: 4rem;
-    font-family: Arial;
     z-index: 1000;
 }
 
@@ -100,6 +99,12 @@ div.Menu button {
 	border: none;
 	font-size: 10vw;
 	color: white;
+    text-shadow: white 0px 0px 4vw;
+    transition: all 0.1s;
+}
+
+div.Menu button:hover {
+    font-size: 12.5vw;
 }
 
 div.Menu p {
