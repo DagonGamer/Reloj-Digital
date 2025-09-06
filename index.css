@@ -78,6 +78,39 @@ div.RedDeClick.Hidden {
     backdrop-filter: none;
 }
 
+
+div.RedDeClick p {
+    color: white;
+    position: absolute;
+    bottom: 2.5dvh;
+    font-size: 5dvw;
+    left: 2.5dvw;
+    margin: 0px;
+}
+
+div.RedDeClick p.Porcentaje {
+    left: unset;
+    right: 2.5dvw;
+}
+
+div.RedDeClick div.Progress {
+    background: #0008;
+    position: absolute;
+    border-radius: 100dvw;
+    bottom: 1dvh;
+    height: 1dvh;
+    width: 95dvw;
+    left: 2.5dvw;
+}
+
+div.RedDeClick div.Progress div {
+    background: white;
+    height: 1dvh;
+    width: calc(95dvw * var(--Progress) / 100);
+    border-radius: 100dvw;
+    transition: all 0.1s;
+}
+
 div.Menu {
     position: fixed;
     top: 0px;
@@ -110,36 +143,4 @@ div.Menu button {
 
 div.Menu button:hover {
     font-size: 12.5dvw;
-}
-
-div.RedDeClick p {
-    color: white;
-    position: absolute;
-    bottom: 2.5dvh;
-    font-size: 5dvw;
-    left: 2.5dvw;
-    margin: 0px;
-}
-
-div.RedDeClick p.Porcentaje {
-    left: unset;
-    right: 2.5dvw;
-}
-
-div.RedDeClick div.Progress {
-    background: #0008;
-    position: absolute;
-    border-radius: 100dvw;
-    bottom: 1dvh;
-    height: 1dvh;
-    width: 95dvw;
-    left: 2.5dvw;
-}
-
-div.RedDeClick div.Progress div {
-    background: white;
-    height: 1dvh;
-    width: calc(95dvw * var(--Progress) / 100);
-    border-radius: 100dvw;
-    transition: all 0.1s;
 }
