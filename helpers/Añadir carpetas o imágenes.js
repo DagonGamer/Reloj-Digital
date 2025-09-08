@@ -1,5 +1,14 @@
 let importarImagenOCarpeta = async datos => {
-    console.log(datos);
+    if (datos.action != "picked")
+        return;
+    for (let doc of datos.docs)
+        if (!Config.Imagenes.map(el => el.ID).contains(doc.id))
+            Config.Imagenes.push({
+                Tipo: doc.mimeType == "application/vnd.google-apps.folder" ? "Carpeta" : "Imagen",
+                Espacio: "drive",
+                ID: doc.id,
+                Estilo: "Estilo por defecto"
+            });
 }
 
 var anadirImagenesOCarpetas = async () => {
