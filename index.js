@@ -4,7 +4,7 @@
  * Un inicio decente al entrar por primera vez
  * Eliminar configuración
  * Notificar que los cambios hay que guardarlos, se han guardado y que hay que reiniciar para ver algunos cambios
- * 
+ * Separar styles
  * 
  */
 
