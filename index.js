@@ -1,4 +1,4 @@
-var Config, OrdenFotos, IdxImagen = 0, accessToken, TotalImagenes = 0, TotalCarpetas = 0;
+var Config, OrdenFotos, IdxImagen = 0, accessToken, TotalImagenes = 0, TotalCarpetas = 0, noSeleccionables = [];
 
 var sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 

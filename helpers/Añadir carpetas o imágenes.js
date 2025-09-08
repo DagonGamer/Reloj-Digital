@@ -2,7 +2,7 @@ let importarImagenOCarpeta = async datos => {
     if (datos.action != "picked")
         return;
     for (let doc of datos.docs)
-        if (!Config.Imagenes.map(el => el.ID).contains(doc.id))
+        if (!noSeleccionables.contains(doc.id))
             Config.Imagenes.push({
                 Tipo: doc.mimeType == "application/vnd.google-apps.folder" ? "Carpeta" : "Imagen",
                 Espacio: "drive",

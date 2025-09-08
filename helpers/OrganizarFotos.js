@@ -2,7 +2,9 @@ let anadirFotosCarpeta = async (id, estilo) => {
 
     await listAllFilesInFolder(id)
         .then(async fotos => {
-            
+
+            noSeleccionables.push(id);
+
             for (let dato of fotos) {
                 if (dato.mimeType === 'application/vnd.google-apps.folder') {
                     TotalCarpetas++;
@@ -10,6 +12,7 @@ let anadirFotosCarpeta = async (id, estilo) => {
                 } else if (dato.mimeType.includes("image")) {
                     TotalImagenes++;
                     OrdenFotos.push([dato.id, estilo]);
+                    noSeleccionables.push(id);
                 }
             }
 
@@ -24,7 +27,8 @@ var OrganizarFotos = async () => {
     document.querySelector("p.ContadorSelecciones").innerText = `${Config.Imagenes.length} selecci${Config.Imagenes.length == 1 ? "ón" : "ones"}`;
     for (let dato of Config.Imagenes) {
         if (dato.Tipo == "Imagen") {
-            OrdenFotos.push([dato.ID, dato.Estilo])
+            OrdenFotos.push([dato.ID, dato.Estilo]);
+            noSeleccionables.push(dato.ID);
             TotalImagenes++;
         } else {
             TotalCarpetas++;
