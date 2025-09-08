@@ -68,6 +68,7 @@ div.ProgressImagen {
     height: calc(0.3cm+1dvh);
     width: 110dvw;
     left: -5dvw;
+    z-index: 11;
 }
 
 div.ProgressImagen div {
