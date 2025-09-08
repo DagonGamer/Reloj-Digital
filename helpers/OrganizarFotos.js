@@ -21,6 +21,7 @@ var OrganizarFotos = async () => {
 
     OrdenFotos = [];
 
+    document.querySelector("p.ContadorSelecciones").innerText = `${Config.Imagenes.length} selecci${Config.Imagenes.length == 1 ? "ón" : "ones"}`;
     for (let dato of Config.Imagenes) {
         if (dato.Tipo == "Imagen") {
             OrdenFotos.push([dato.ID, dato.Estilo])
