@@ -45,18 +45,5 @@
             ]
         }
     ],
-    "Imagenes": [
-        {
-            "Tipo": "Carpeta",
-            "Espacio": "drive",
-            "ID": "1MyyZbqViF92aEFiFfX72lmOTFvTLAkG1",
-            "Estilo": "Estilo por defecto"
-        },
-        {
-            "Tipo": "Imagen",
-            "Espacio": "drive",
-            "ID": "1C8vcb1_QrmGRW5bODy8WfFxzKBc3n_B4",
-            "Estilo": "Estilo por defecto"
-        }
-    ]
+    "Imagenes": []
 }
