@@ -13,6 +13,8 @@
     z-index: 1000;
     top: 0px;
     left: 0px;
+    width: 100dvw !important;
+    height: 100dvh !important;
 }
 
 body {
