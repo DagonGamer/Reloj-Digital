@@ -193,6 +193,7 @@ div.Menu p {
 	margin: 0px;
 	height: 15dvw;
 	align-content: center;
+    width: 100%;
 }
 
 div.Menu input[type="text"] {
