@@ -60,6 +60,26 @@ div.Reloj p {
     overflow: visible;
 }
 
+div.ProgressImagen {
+    background: #0008;
+    position: fixed;
+    border-radius: 0px;
+    bottom: -1dvh;
+    height: calc(0.3cm+1dvh);
+    width: 110dvw;
+    left: -5dvw;
+}
+
+div.ProgressImagen div {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: calc(0.3cm+1dvh);
+    transition: all 0.1s;
+    background: #fff8;
+    width: calc(5dvw + 100dvw * var(--Progress) / 100);
+}
+
 div.RedDeClick {
     position: fixed;
     top: 0px;
