@@ -93,13 +93,13 @@
             <input type="text" class="Delay" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
         </div>
 
-        <button>Editar imágenes</button>
+        <button onclick="document.querySelector('div.Menu.Config').classList.add('Hidden');document.querySelector('div.Menu.Fotos').classList.remove('Hidden');">Editar imágenes</button>
         <button>Editar estilos</button>
         <button onclick="AdaptarConfiguracion();">Guardar configuración</button>
     </div>
 
     <div class="Menu Fotos Hidden">
-        <button>Volver</button>
+        <button onclick="document.querySelector('div.Menu.Fotos').classList.add('Hidden');document.querySelector('div.Menu.Config').classList.remove('Hidden');">Volver</button>
         <p class="ContadorImagenesCarpetas">1 carpeta - 123 fotos</p>
         <button>Añadir imágenes</button>
     </div>
