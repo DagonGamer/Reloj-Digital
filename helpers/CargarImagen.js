@@ -14,6 +14,8 @@ var DescargarImagenes = async () => {
         }
     }
 
+    document.querySelector("div.ProgressImagen").remove();
+
 }
 
 var CargarImagen = async (selector) => {
