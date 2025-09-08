@@ -20,6 +20,8 @@ var DescargarImagenes = async () => {
 
 var CargarImagen = async (selector) => {
 
+    if (OrdenFotos.length == 0) return;
+
     let element = document.querySelector(selector);
 
     // Busca el estilo de la imagen
