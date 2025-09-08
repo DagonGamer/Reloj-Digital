@@ -77,7 +77,7 @@ div.ProgressImagen div {
     left: 0px;
     height: 1.5dvh;
     transition: all 0.1s;
-    background: #fff8;
+    background: #fff;
     width: calc(5dvw + 100dvw * var(--Progress) / 100);
 }
 
