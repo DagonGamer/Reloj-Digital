@@ -1,3 +1,13 @@
+/* TO DO
+ * 
+ * Notificar que no hay imágenes
+ * Un inicio decente al entrar por primera vez
+ * Eliminar configuración
+ * Notificar que los cambios hay que guardarlos, se han guardado y que hay que reiniciar para ver algunos cambios
+ * 
+ * 
+ */
+
 var Config, OrdenFotos, IdxImagen = 0, accessToken, TotalImagenes = 0, TotalCarpetas = 0, noSeleccionables = [];
 
 var sleep = ms => new Promise(resolve => setTimeout(resolve, ms));

@@ -27,7 +27,7 @@ var anadirImagenesOCarpetas = async () => {
         .setOAuthToken(accessToken)
         .setDeveloperKey('AIzaSyCO7_To8On1vcHoEcjWbMDnOlFPkj-KRbo')
         .setCallback(importarImagenOCarpeta)
-        .enableFeature(google.picker.Feature.MULTISELECT)
+        .enableFeature(google.picker.Feature.MULTISELECT_ENABLED)
         .setAppId('808752279453-v65b4epu2pjqj8ee5qnj2fe9l7odgqpg.apps.googleusercontent.com')
         .build();
         

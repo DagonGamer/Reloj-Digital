@@ -35,7 +35,7 @@ button#SignIn {
     background: white;
     color: black;
     font-size: 4rem;
-    z-index: 1000;
+    z-index: 10000;
 }
 
 div.Reloj {
@@ -67,6 +67,27 @@ div.Reloj p {
     z-index: 1;
     margin: 0px;
     overflow: visible;
+}
+
+div.Notification {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 80%;
+    height: 90dvh;
+    padding: 5dvh 10%;
+    border: none;
+    border-radius: 0px;
+    z-index: 30;
+    pointer-events: none;
+    background: transparent;
+}
+
+div.Notification div {
+    width: 100%;
+    height: auto;
+    background: #0005;
+    border-radius: 1dvh;
 }
 
 div.ProgressImagen {
