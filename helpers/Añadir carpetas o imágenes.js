@@ -11,8 +11,7 @@ var anadirImagenesOCarpetas = async () => {
         .setIncludeFolders(true)
         .setSelectFolderEnabled(true)
         // 3. Solo muestra MIME types de imagen
-        .setMimeTypes('image/png,image/jpeg,image/jpg,image/gif,image/webp')
-        .setQuery(Config.Imagenes.map(el => `not id = '${el.ID}'`).join(' and '));
+        .setMimeTypes('image/png,image/jpeg,image/jpg,image/gif,image/webp');
 
     pickr = new google.picker.PickerBuilder()
         .addView(vista)
