@@ -54,6 +54,7 @@
     <script src="helpers/CargarImagen.js"></script>
     <script src="helpers/ActualizarTextos.js"></script>
     <script src="helpers/Cargar.js"></script>
+    <script src="helpers/Añadir carpetas o imágenes.js"></script>
 
     <link rel="stylesheet" href="index.css">
 
@@ -107,7 +108,7 @@
         <p style="position: absolute; top: 1dvh;" class="ContadorImagenesCarpetas">135 fotos en 12 carpetas</p>
         <p style="position: absolute; top: 5dvh;" class="ContadorSelecciones">3 selecciones</p>
         <button onclick="document.querySelector('div.Menu.Fotos').classList.add('Hidden');document.querySelector('div.Menu.Config').classList.remove('Hidden');">Volver</button>
-        <button>Añadir imágenes/carpetas</button>
+        <button onclick="anadirImagenesOCarpetas();">Añadir imágenes/carpetas</button>
         <button>Eliminar imágenes/carpetas</button>
     </div>
 
