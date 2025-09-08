@@ -6,10 +6,10 @@ var DescargarImagenes = async () => {
         if (!OrdenFotos[i][0].includes("blob:https"))
             await IDaIMG(OrdenFotos[i][0])
                 .then(file => OrdenFotos[i][0] = URL.createObjectURL(file));
-        document.querySelector("div.RedDeClick div.Progress").style = `--Progress: ${i / OrdenFotos.length * 100};`;
-        document.querySelector("div.RedDeClick p.Porcentaje").innerText = `${Math.floor(i / OrdenFotos.length * 1000) / 10}%`;
-        if (Percentage != Math.floor(i / OrdenFotos.length * 10) * 10) {
-            Percentage = Math.floor(i / OrdenFotos.length * 10) * 10;
+        document.querySelector("body").style = `--Progress: ${(i+1) / OrdenFotos.length * 100};`;
+        document.querySelector("div.RedDeClick p.Porcentaje").innerText = `${Math.floor((i+1) / OrdenFotos.length * 1000) / 10}%`;
+        if (Percentage != Math.floor((i+1) / OrdenFotos.length * 10) * 10) {
+            Percentage = Math.floor((i+1) / OrdenFotos.length * 10) * 10;
             console.log(`${Percentage}% de las imágenes cargadas.`);
         }
     }
@@ -99,6 +99,7 @@ var CambiarImagen = async () => {
 
     setTimeout(CambiarImagen, Config.Delay * 1000);
     console.log("Imagen cambiada.");
+    document.querySelector("body").style = `--Showed: ${(IdxImagen+1) / OrdenFotos.length * 100};`;
     await CargarImagen("div.Reloj.Waiting");
 
 }

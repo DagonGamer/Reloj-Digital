@@ -97,7 +97,7 @@ div.RedDeClick p.Porcentaje {
 
 div.RedDeClick div.Progress {
     background: #0008;
-    position: absolute;
+    position: fixed;
     border-radius: 100dvw;
     bottom: 1dvh;
     height: 1dvh;
@@ -106,11 +106,22 @@ div.RedDeClick div.Progress {
 }
 
 div.RedDeClick div.Progress div {
-    background: white;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
     height: 1dvh;
-    width: calc(95dvw * var(--Progress) / 100);
     border-radius: 100dvw;
     transition: all 0.1s;
+}
+
+div.RedDeClick div.Progress div.Progress {
+    background: #fff8;
+    width: calc(95dvw * var(--Progress) / 100);
+}
+
+div.RedDeClick div.Progress div.Showed {
+    background: white;
+    width: calc(95dvw * var(--Showed) / 100);
 }
 
 div.Menu {
