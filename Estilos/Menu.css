@@ -28,7 +28,9 @@ div.Menu button {
 	transition: all 0.1s;
 	height: 3rem;
 	border-radius: 0.75rem;
-	margin: 0.25rem 0px;
+	margin: 0.25rem auto;
+    max-width: 25rem;
+    width: 100%;
 }
 
 div.Menu button:hover {
