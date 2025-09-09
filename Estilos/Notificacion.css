@@ -13,12 +13,12 @@ div.Notification {
 }
 
 div.Notification div {
+    position: relative;
     width: 100%;
     height: auto;
     background: #0009;
     border-radius: 0.75rem;
     margin: 0.5rem 0px;
-    transition: all 0.5s;
 }
 
 div.Notification div p {

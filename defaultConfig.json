@@ -1,6 +1,6 @@
 {
     "Delay": 10,
-    "retrasoNotificaciones": 3,
+    "retrasoNotificaciones": 8,
     "Estilos": [
         {
             "Nombre": "Estilo por defecto",
