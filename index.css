@@ -87,26 +87,26 @@ div.Notification div {
     width: 100%;
     height: auto;
     background: #0009;
-    border-radius: 1dvh;
-    margin: 1dvh 0px;
+    border-radius: 0.75rem;
+    margin: 0.5rem 0px;
 }
 
 div.Notification div p {
     color: white;
     text-align: center;
-    font-size: 3dvh;
-    margin: 1dvh;
+    font-size: 1.25rem;
+    margin: 1rem;
 }
 
 div.Notification div button {
     background: none;
     border: none;
     color: white;
-    font-size: 2.5dvh;
+    font-size: 1.25rem;
     overflow: visible;
     position: absolute;
     cursor: pointer;
-    width: 3dvh;
+    width: 1.5rem;
     pointer-events: all;
 }
 
@@ -156,7 +156,7 @@ div.RedDeClick p {
     color: white;
     position: absolute;
     bottom: 2.5dvh;
-    font-size: 5dvw;
+    font-size: 1.25rem;
     left: 2.5dvw;
     margin: 0px;
 }
@@ -220,40 +220,44 @@ div.Menu.Hidden {
 div.Menu button {
 	background: #fff2;
 	border: none;
-	font-size: 6dvw;
+	font-size: 1.25rem;
 	color: white;
-	text-shadow: white 0px 0px 4dvw;
 	transition: all 0.1s;
-	height: 15dvw;
-	border-radius: 4dvw;
-	margin: 1dvw 0px;
+	height: 3rem;
+	border-radius: 0.75rem;
+	margin: 0.25rem 0px;
 }
 
 div.Menu button:hover {
     background: #fff7;
-    font-size: 6.25dvw;
+    font-size: 1.35rem;
+}
+
+div.Menu div.Input {
+    margin: 0.75rem auto;
 }
 
 div.Menu p {
-	font-size: 6dvw;
+	font-size: 1.25rem;
 	color: white;
-	text-shadow: white 0px 0px 4dvw;
 	text-align: center;
 	transition: all 0.1s;
-	margin: 0px;
-	height: 15dvw;
+	height: 2rem;
 	align-content: center;
-    width: 100%;
+    width: auto;
+    display: inline;
+    margin: 0px;
 }
 
 div.Menu input[type="text"] {
-	font-size: 6dvw;
+	font-size: 1.25rem;
 	background: #fff4;
 	text-align: center;
 	border-radius: 100dvw;
 	border: none;
 	color: white;
-	width: 50dvw;
+	width: 5rem;
 	padding: 0px;
-	margin: -3dvw 15dvw 3dvw 15dvw;
+    display: inline;
+    height: 1.75rem;
 }

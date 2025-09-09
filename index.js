@@ -5,6 +5,7 @@
  * Eliminar configuración
  * Notificar que los cambios hay que guardarlos, se han guardado y que hay que reiniciar para ver algunos cambios
  * Separar styles
+ * Restilizar configuración para que se muestre a un tamaño lógico con REM y demás
  * 
  */
 
