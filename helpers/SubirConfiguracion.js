@@ -72,6 +72,16 @@ var ActualizarConfiguracion = async () => {
             body: form
         }
     );
+
+    Notificar("Configuración guardada.");
+}
+
+var AdaptarConfiguracion = () => {
+
+    Config.Delay = document.querySelector("input.Delay").value.toString();
+
+    ActualizarConfiguracion();
+
 }
 
 async function formatearAppDataFiles() {

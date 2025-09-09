@@ -20,11 +20,3 @@ var CargarInputsConfiguracion = () => {
     document.querySelector("input.Delay").value = Config.Delay;
 
 }
-
-var AdaptarConfiguracion = () => {
-
-    Config.Delay = document.querySelector("input.Delay").value.toString();
-
-    ActualizarConfiguracion();
-
-}
