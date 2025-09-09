@@ -100,8 +100,13 @@
         <button onclick="document.querySelector('div.Menu.Config').classList.add('Hidden');document.querySelector('div.Menu.Principal').classList.remove('Hidden');">Volver</button>
 
         <div class="Input">
-            <p>Retraso (en segundos): </p>
+            <p>Retraso de las imágenes (en segundos): </p>
             <input type="text" class="Delay" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+        </div>
+
+        <div class="Input">
+            <p>Retraso de las notificaciones (en segundos): </p>
+            <input type="text" class="DelayNotificaciones" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
         </div>
 
         <button onclick="document.querySelector('div.Menu.Config').classList.add('Hidden');document.querySelector('div.Menu.Fotos').classList.remove('Hidden');">Editar imágenes</button>

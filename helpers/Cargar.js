@@ -18,5 +18,6 @@ var CargarFuentes = () => {
 var CargarInputsConfiguracion = () => {
 
     document.querySelector("input.Delay").value = Config.Delay;
+    document.querySelector("input.DelayNotificaciones").value = Config.retrasoNotificaciones;
 
 }

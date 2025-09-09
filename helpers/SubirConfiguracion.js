@@ -78,7 +78,8 @@ var ActualizarConfiguracion = async () => {
 
 var AdaptarConfiguracion = () => {
 
-    Config.Delay = document.querySelector("input.Delay").value.toString();
+    Config.Delay = Number(document.querySelector("input.Delay").value);
+    Config.retrasoNotificaciones = Number(document.querySelector("input.DelayNotificaciones").value);
 
     ActualizarConfiguracion();
 
