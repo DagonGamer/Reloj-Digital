@@ -7,4 +7,11 @@ var Notificar = (info) => {
     `;
     document.querySelector("div.Notification").appendChild(div);
 
+    setTimeout(() => {
+        div.style.opacity = 0;
+        setTimeout(() => div.remove(), 600);
+    }, Config.retrasoNotificaciones);
+
+    div.querySelector("button").onclick = () => div.remove();
+
 }

@@ -18,6 +18,7 @@ div.Notification div {
     background: #0009;
     border-radius: 0.75rem;
     margin: 0.5rem 0px;
+    transition: all 0.5s;
 }
 
 div.Notification div p {
