@@ -1,0 +1,40 @@
+div.Notification {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 80%;
+    height: 90dvh;
+    padding: 5dvh 10%;
+    border: none;
+    border-radius: 0px;
+    z-index: 30;
+    pointer-events: none;
+    background: transparent;
+}
+
+div.Notification div {
+    width: 100%;
+    height: auto;
+    background: #0009;
+    border-radius: 0.75rem;
+    margin: 0.5rem 0px;
+}
+
+div.Notification div p {
+    color: white;
+    text-align: center;
+    font-size: 1.25rem;
+    margin: 1rem;
+}
+
+div.Notification div button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.25rem;
+    overflow: visible;
+    position: absolute;
+    cursor: pointer;
+    width: 1.5rem;
+    pointer-events: all;
+}

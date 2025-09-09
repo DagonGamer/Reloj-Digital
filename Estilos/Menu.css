@@ -1,0 +1,66 @@
+div.Menu {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 80%;
+    height: 80dvh;
+    padding: 10dvh 10%;
+    border: none;
+    border-radius: 0px;
+    display: grid;
+    z-index: 20;
+    opacity: 1;
+    pointer-events: all;
+    transition: all 0.25s;
+    align-content: center;
+}
+
+div.Menu.Hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+div.Menu button {
+	background: #fff2;
+	border: none;
+	font-size: 1.25rem;
+	color: white;
+	transition: all 0.1s;
+	height: 3rem;
+	border-radius: 0.75rem;
+	margin: 0.25rem 0px;
+}
+
+div.Menu button:hover {
+    background: #fff7;
+    font-size: 1.35rem;
+}
+
+div.Menu div.Input {
+    margin: 0.75rem auto;
+}
+
+div.Menu p {
+	font-size: 1.25rem;
+	color: white;
+	text-align: center;
+	transition: all 0.1s;
+	height: 2rem;
+	align-content: center;
+    width: auto;
+    display: inline;
+    margin: 0px;
+}
+
+div.Menu input[type="text"] {
+	font-size: 1.25rem;
+	background: #fff4;
+	text-align: center;
+	border-radius: 100dvw;
+	border: none;
+	color: white;
+	width: 5rem;
+	padding: 0px;
+    display: inline;
+    height: 1.75rem;
+}

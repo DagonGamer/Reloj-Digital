@@ -1,0 +1,63 @@
+div.RedDeClick {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100dvh;
+    border: none;
+    border-radius: 0px;
+    z-index: 15;
+    background: #0006;
+    backdrop-filter: blur(5dvw);
+    opacity: 1;
+}
+
+div.RedDeClick.Hidden {
+    background: transparent;
+    backdrop-filter: none;
+    opacity: 0;
+}
+
+
+div.RedDeClick p {
+    color: white;
+    position: absolute;
+    bottom: 2.5dvh;
+    font-size: 1.25rem;
+    left: 2.5dvw;
+    margin: 0px;
+}
+
+div.RedDeClick p.Porcentaje {
+    left: unset;
+    right: 2.5dvw;
+}
+
+div.RedDeClick div.Progress {
+    background: #0008;
+    position: fixed;
+    border-radius: 100dvw;
+    bottom: 1dvh;
+    height: 1dvh;
+    width: 95dvw;
+    left: 2.5dvw;
+}
+
+div.RedDeClick div.Progress div {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 1dvh;
+    border-radius: 100dvw;
+    transition: all 0.1s;
+}
+
+div.RedDeClick div.Progress div.Progress {
+    background: #fff8;
+    width: calc(95dvw * var(--Progress) / 100);
+}
+
+div.RedDeClick div.Progress div.Showed {
+    background: white;
+    width: calc(95dvw * var(--Showed) / 100);
+}

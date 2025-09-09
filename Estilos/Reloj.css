@@ -1,0 +1,51 @@
+div.Reloj {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100dvh;
+    border: none;
+    border-radius: 0px;
+    background: black;
+    z-index: 10;
+}
+
+div.Reloj img.Fondo {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100dvh;
+    border: none;
+    border-radius: 0px;
+    object-fit: cover;
+    z-index: 0;
+}
+
+div.Reloj p {
+    position: fixed;
+    z-index: 1;
+    margin: 0px;
+    overflow: visible;
+}
+
+div.ProgressImagen {
+    background: #0008;
+    position: fixed;
+    border-radius: 0px;
+    bottom: -1dvh;
+    height: 1.5dvh;
+    width: 110dvw;
+    left: -5dvw;
+    z-index: 11;
+}
+
+div.ProgressImagen div {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 1.5dvh;
+    transition: all 0.1s;
+    background: #fff;
+    width: calc(5dvw + 100dvw * var(--Progress) / 100);
+}
