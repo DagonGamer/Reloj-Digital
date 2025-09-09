@@ -20,7 +20,10 @@ var DescargarImagenes = async () => {
 
 var CargarImagen = async (selector, intento = 0) => {
 
-    if (OrdenFotos.length == 0) return;
+    if (OrdenFotos.length == 0) {
+        Notificar("No hay imágenes disponibles. Añade más en la configuración.");
+        return;
+    }
 
     let element = document.querySelector(selector);
     let imgFondo = element.querySelector("img.Fondo");
@@ -42,7 +45,10 @@ var CargarImagen = async (selector, intento = 0) => {
                 IdxImagen = 0;
             if (intento <= OrdenFotos.length+2)
                 await CargarImagen(selector, intento+1);
-            else return;
+            else {
+                Notificar("No hay imágenes para la postura de la pantalla. Cambia la postura o añade imágenes de esa postura.");
+                return;
+            }
         }
 
         // Carga los textos
