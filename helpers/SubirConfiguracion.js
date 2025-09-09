@@ -36,7 +36,8 @@ var SubirConfiguracion = async () => {
             }
         );
 
-        console.log(response)
+        console.log(response);
+        Notificar("Configuración creada.");
 
     } catch (err) {
         console.error(err);
