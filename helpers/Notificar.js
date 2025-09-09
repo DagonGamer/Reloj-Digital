@@ -9,12 +9,10 @@ var Notificar = (info) => {
 
     setTimeout(() => {
         div.style.opacity = 0;
-        setTimeout(() => {
-            div.style.height = "0px";
-            setTimeout(div.remove, 600);
-        }, 600);
+        div.style.margin = "-" + div.getBoundingClientRect().height/2 + "px 0px";
+        setTimeout(() => div.remove(), 600);
     }, Config.retrasoNotificaciones*1000);
 
-    div.querySelector("button").onclick = div.remove;
+    div.querySelector("button").onclick = () => div.remove();
 
 }
