@@ -3,7 +3,7 @@ var Notificar = (info) => {
     let div = document.createElement("div");
     div.innerHTML = `
         <button>x</button>
-        <p>hfdsklkfds</p>
+        <p>${info}</p>
     `;
     document.querySelector("div.Notification").insertBefore(div, document.querySelector("div.Notification div"));
 	div.style.position = "absolute";

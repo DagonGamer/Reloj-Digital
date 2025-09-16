@@ -9,6 +9,7 @@ let importarImagenOCarpeta = async datos => {
                 ID: doc.id,
                 Estilo: "Estilo por defecto"
             });
+    Notificar("Se han añadido las selecciones. Guarda la configuración.")
 }
 
 var anadirImagenesOCarpetas = async () => {
